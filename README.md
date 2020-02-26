@@ -1,5 +1,7 @@
+
 # Haskell Editor Setup
 [![Run on Repl.it](https://repl.it/badge/github/amerocu/haskell-editor-setup)](https://repl.it/github/amerocu/haskell-editor-setup)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/dogwith1eye/my-project) 
 
 An example project setup for Haskell using VSCode.
 Fire those commands hoping for the best.
