@@ -1,0 +1,1 @@
+/home/marco/Develop/Haskell/editor-setup/.gitpod.Dockerfile
