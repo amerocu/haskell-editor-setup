@@ -31,6 +31,8 @@ library:
   exposed-modules:
     - Lib
     - Exercise.Chapter02
+    - Exercise.Chapter06
+    - Exercise.Chapter06Bis
 
 executables:
   my-project-exe:
