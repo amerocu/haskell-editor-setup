@@ -1,23 +1,11 @@
 module Exercise.Chapter06Bis where
 -- inverte gli elementi di una lista (fold)
 reverse' :: [a] -> [a]
-reverse' xs = reverse'' [] xs
-
-reverse'' :: [a] -> [a] -> [a]
-reverse'' acc [] = acc
-reverse'' acc (x: xs) = reverse'' (x : acc) xs
- 
-
-reverseFoldr :: [a] -> [a]
-reverseFoldr xs = foldr (:) [] xs
-
-reverseFoldl :: [a] -> [a]
-reverseFoldl xs = foldl (flip (:)) [] xs
-
+reverse' xs = undefined
 
 -- scrivere la funzione del fattoriale (fold)
 fact' :: Int -> Int 
-fact' val = foldl (*) 1 [2..val]
+fact' val = undefined
 
 sum :: [Int] -> Int
 sum = undefined
@@ -27,10 +15,7 @@ sum = undefined
 --              ^  ^  ^  ^  ^
 --              0  1  2  3  4...
 insertAt :: a -> Int -> [a] -> [a]
-insertAt a b xs = let sample acc val = if length acc == b 
-                                       then val:a:acc--reverse(a:val:reverse acc)
-                                       else val:acc--reverse (val:reverse acc)
-                                       in reverse $ foldl sample [] xs
+insertAt a b xs = undefined
 
 -- scrivere una funzione che elimina gli elementi in posizione pari (fold e altri modi, filter)
 oddList :: [a] -> [a]
@@ -63,35 +48,7 @@ mapOdd = undefined
 -- annotateSumUntil [1] =>  [(1, 0)]
 -- annotateSumUntil [1, 2, 3, 4] =>  [(1, 0), (2, 1), (3, 3), (4, 6)]
 annotateSumUntil :: [Int] -> [(Int, Int)]
-annotateSumUntil xs = annotateSumUntil' 0 xs
-
-annotateSumUntil' :: Int -> [Int] ->  [(Int, Int)]
-annotateSumUntil'  _ []= []
-annotateSumUntil'  n (x:xs) = (x, n) : annotateSumUntil' (n + x) xs
-
-annotateSumUntilFoldl1 :: [Int] -> [(Int, Int)]
-annotateSumUntilFoldl1 xs = snd res where
-
-    f :: (Int, [(Int, Int)]) -> Int -> (Int, [(Int, Int)])
-    f (sum, l) a = (sum + a, l ++ [(sum, a)])
-
-    res :: (Int, [(Int, Int)]) 
-    res = foldl f (0, []) xs
-
-annotateSumUntilFoldl2 :: [Int] -> [(Int, Int)]
-annotateSumUntilFoldl2 [] = []
-annotateSumUntilFoldl2 (x:xs) = foldl f [(x, 0)] xs where 
-    f :: [(Int, Int)] -> Int -> [(Int, Int)]
-    f acc val = acc ++ [(val, uncurry(+) $ last acc)]
-
-annotateSumUntilFoldr' :: [Int] -> [(Int, Int)]
-annotateSumUntilFoldr' xs = resf 0  where
-
-    f :: Int -> (Int -> [(Int, Int)]) -> (Int -> [(Int, Int)])
-    f a g = \x-> (a, x) : g (x + a)
-
-    resf :: Int -> [(Int, Int)]
-    resf = foldr f (const []) xs
+annotateSumUntil xs = undefined
 
 -- raggruppa un lista per modulo n  (fold)
 -- groupNumbers 2 [1, 2, 3, 4, 5, 6] => [[6, 4, 2], [5, 3, 1]]

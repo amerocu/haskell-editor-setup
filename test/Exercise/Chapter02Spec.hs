@@ -1,6 +1,8 @@
 module Exercise.Chapter02Spec where
 
 import SpecHelper
+import Exercise.Chapter02
+
 import Control.Exception (evaluate)
 
 spec :: Spec

@@ -16,7 +16,7 @@ sumSquares a b = undefined
 -- Define a higher order sum function which accepts an (Int -> Int) function to apply to all integers between two values.
 -- Again this should look similar to the sumInts and sumSquares functions
 higherOrderSum :: (Int -> Int) -> Int -> Int -> Int
-higherOrderSum intApplication a b = undefined
+higherOrderSum f a b = undefined
 
 -- Define the square sum in terms of higherOrderSum
 hoSumSquares :: Int -> Int -> Int
